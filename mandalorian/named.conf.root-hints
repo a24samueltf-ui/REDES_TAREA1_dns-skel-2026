@@ -1,0 +1,5 @@
+// Root-hints borradas: mandalorian solo resuelve a través de darthvader
+// zone "." {
+// 	type hint;
+// 	file "/usr/share/dns/root.hints";
+// };
