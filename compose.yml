@@ -13,21 +13,26 @@ services:
   darthvader:
     build: dnsserver
     hostname: darthvader
-    # command: -g -4
-    # volumes:
-      # - ./darthvader/named.conf.options:/etc/bind/named.conf.options
-      # - ./darthvader/named.conf.local:/etc/bind/named.conf.local
-      # - ./darthvader/zonas:/var/cache/bind
-      # - ./dnsserver/root.hints:/usr/share/dns/root.hints
-      # - ./logs:/logs
+    command: -g -4 -u root
+    volumes:
+      #- ./darthvader/named.conf.options:/etc/bind/named.conf.options
+      - ./darthvader/named.conf.local:/etc/bind/named.conf.local
+      - ./darthvader/zonas/db.starwars.lan:/etc/bind/db.starwars.lan
+      - ./darthvader/zonas/db.192:/etc/bind/db.192
+      #- ./darthvader/zonas:/var/cache/bind
+      #- ./dnsserver/root.hints:/usr/share/dns/root.hints
+      #- ./darthvader/named.conf.default-zones:/etc/bind/named.conf.default-zones
+      #- ./logs:/logs
     networks:
       rededns:
         ipv4_address: 192.168.20.10
 
-     
+
   cliente:
     build: cliente
     hostname: cliente1
+    depends_on:
+      - darthvader
     networks:
       rededns:
         ipv4_address: 192.168.20.110
