@@ -11,7 +11,9 @@ Se puede ver que en el primer dig el Query Time fue de 419 ms y en cambio en el 
 
 
 
-2.Configura o servidor BIND9 no equipo mandalorian para que empregue como reenviador a darthvader pegando no documento de entrega contido do ficheiro /etc/bind/named.conf.options e a saída deste comando: dig @localhost santiagodecompostela.gal. Para un correcto funcionamento deberás borrar as root-hints do servidor mandalorian.
+---
+
+
 
 
 
