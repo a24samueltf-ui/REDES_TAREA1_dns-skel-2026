@@ -13,7 +13,7 @@ Se puede ver que en el primer dig el Query Time fue de 419 ms y en cambio en el 
 
 ---
 
-
+5.Comproba que podes resolver os distintos rexistros de recursos. Pega no documento de entrega a saída dos comandos:
 
 
 
