@@ -27,6 +27,18 @@ services:
       rededns:
         ipv4_address: 192.168.20.10
 
+  darthsidious:
+    build: dnsserver
+    hostname: darthsidious
+    depends_on:
+      - mandalorian
+      - darthvader
+    networks:
+      rededns:
+        ipv4_address: 192.168.20.111
+    volumes:
+      - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
+
 
   cliente:
     build: cliente
@@ -35,7 +47,7 @@ services:
       - darthvader
     networks:
       rededns:
-        ipv4_address: 192.168.20.110
+        ipv4_address: 192.168.20.11
     # volumes:
     #   - ./cliente/rndc.conf:/etc/bind/rndc.conf
     #   - ./cliente/chave.key:/etc/bind/chave.key
