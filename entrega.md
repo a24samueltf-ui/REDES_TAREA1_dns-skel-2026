@@ -1,3 +1,8 @@
+
+# TAREA 1.1
+
+
+
 1.Instala o servidor BIND9 no equipo darthvader. Comproba que xa funciona coma servidor DNS caché pegando no documento de entrega a saída deste comando dig @localhost xunta.gal 
 
 Esta es la salida que devolvió el comando:
@@ -48,3 +53,50 @@ nslookup -q=txt lenda.starwars.lan
 nslookup 192.168.20.11
 
 ![alt text](capturas/image-8.png)
+
+
+
+# TAREA 1.3
+
+
+### PUNTO 1
+
+named.conf.local de darthsidious:
+
+![alt text](image-9.png)
+
+Tomaremos a máquina darthsidious, e configuraremola para ser servidor secundario, tanto da zona primaria de resolución directa como de resolución inversa. Captura os ficheiros de configuración en ambalas dúas máquinas. Fai unha captura onde se vexa o reinicio da máquina darthsidious, no que se vexa no log dos dous equipos e que se fixo a transferencia de zona.
+
+
+named.conf.local de darthvader:
+
+![alt text](image-10.png)
+
+
+Logs de darthsidious donde se ve que se transferiron as zonas:
+
+![alt text](image-11.png)
+
+
+### PUNTO 2
+
+
+Engade un rexistro tipo A (Chewbacca 192.168.20.28) na zona de resolución directa e tamén na de resolución inversa.  Fai unha captura no momento do reinicio do equipo darthvader, no que se vexa o log dos dous equipos e que se amose que se fixo a transferencia de zona. Adxunta tamén unha captura do ficheiro de zona no servidor secundario.
+
+
+![alt text](image-12.png)
+
+
+![alt text](image-13.png)
+
+
+### PUNTO 3
+
+
+Comproba que o servidor secundario pode resolver ese nome.
+
+
+### PUNTO 4
+
+
+Fai os cambios necesarios para que as trasferencias se fagan de forma segura empregando chaves.  Repite as capturas e vídeos do punto 2, engadindo o rexistro r2d2 (192.168.20.29)

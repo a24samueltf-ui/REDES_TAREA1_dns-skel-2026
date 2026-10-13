@@ -1,3 +1,13 @@
+
+key "chave-starwars" {
+	algorithm hmac-sha256;
+	secret "Z5+Fn2n1xFskwd0EwD5fMhThq+krkMYHyzzUhS6NQww=";
+};
+server 192.168.20.10 {  // IP do primario
+    keys { "chave-starwars"; };
+};
+
+
 zone "starwars.lan"{
     type secondary;
     file "/var/cache/bind/db.starwars.lan";

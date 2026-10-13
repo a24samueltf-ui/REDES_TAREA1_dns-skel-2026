@@ -1,6 +1,6 @@
 $TTL    86400
 @       IN      SOA     darthvader.starwars.lan. admin.starwars.lan. (
-                        3 ; Número de serie
+                        13 ; Número de serie
                         3600        ; Actualización (Refresh)
                         1800        ; Reintento (Retry)
                         1209600     ; Caducidade (Expire)

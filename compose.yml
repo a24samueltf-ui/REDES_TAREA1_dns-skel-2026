@@ -31,11 +31,10 @@ services:
     build: dnsserver
     hostname: darthsidious
     depends_on:
-      - mandalorian
       - darthvader
     networks:
       rededns:
-        ipv4_address: 192.168.20.111
+        ipv4_address: 192.168.20.11
     volumes:
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
 
@@ -47,7 +46,7 @@ services:
       - darthvader
     networks:
       rededns:
-        ipv4_address: 192.168.20.11
+        ipv4_address: 192.168.20.112
     # volumes:
     #   - ./cliente/rndc.conf:/etc/bind/rndc.conf
     #   - ./cliente/chave.key:/etc/bind/chave.key
