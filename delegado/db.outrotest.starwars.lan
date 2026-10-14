@@ -1,0 +1,16 @@
+$TTL    86400
+@       IN      SOA     delegado.outrotest.starwars.lan. admin.starwars.lan. (
+                        13 ; Número de serie
+                        3600        ; Actualización (Refresh)
+                        1800        ; Reintento (Retry)
+                        1209600     ; Caducidade (Expire)
+                        86400 )     ; TTL mínimo
+
+; Servidores de nomes
+@       IN      NS      delegdo.outrotest.starwars.lan.
+
+
+
+; Rexistros A dos servidores de nomes
+outrotest      IN      A       192.168.20.8
+abc            IN      A       192.168.30.45

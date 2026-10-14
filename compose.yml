@@ -55,6 +55,21 @@ services:
     - 192.168.20.10
     - 192.168.20.11
 
+  delegado:
+    build: dnsserver
+    hostname: delegado
+    depends_on:
+      - darthvader
+      - mandalorian
+    networks:
+      rededns:
+        ipv4_address: 192.168.20.8
+    volumes:
+      - ./delegado/named.conf.local:/etc/bind/named.conf.local
+      - ./delegado/zonas/db.outrotest.starwars.lan:/var/cache/bind/db.starwars.lan
+
+
+
 networks:
   rededns:
     ipam:
