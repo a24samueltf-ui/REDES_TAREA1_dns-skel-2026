@@ -105,20 +105,20 @@ Fai os cambios necesarios para que as trasferencias se fagan de forma segura emp
 
 Zons db.starwars.lan
 
-![alt text](image-15.png)
+![alt text](capturas/image-15.png)
 
 
 Zona db.192
 
-![alt text](image-16.png)
+![alt text](capturas/image-16.png)
 
 Transferencias de zonas coas chaves
 
 docker logs -f tarea_1-darthvader-1
 
-![alt text](image-17.png)
+![alt text](capturas/image-17.png)
 
 docker logs -f tarea_1-darthsidious-1
 
 
-![alt text](image.png)
+![alt text](capturas/image-18.png)
