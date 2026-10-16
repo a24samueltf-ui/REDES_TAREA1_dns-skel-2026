@@ -21,6 +21,8 @@ WORKDIR /var/cache/bind
 
 RUN sed -i 's/^\s*module(load="imklog")/#module(load="imklog")/' /etc/rsyslog.conf
 RUN mkdir -p /run/named && chmod 775 /run/named && chgrp bind /run/named
+RUN mkdir -p /var/log/named && chown bind:bind /var/log/named
+
 
 CMD ["-g","-4"]
 

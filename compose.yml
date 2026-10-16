@@ -3,11 +3,13 @@ services:
   mandalorian:
     build: dnsserver
     hostname: mandalorian
+    command: ["-f","-4"]
     networks:
       rededns:
         ipv4_address: 192.168.20.20
     volumes:
       - ./mandalorian/named.conf.options:/etc/bind/named.conf.options
+      - ./logs/query.log:/var/log/named/query.log
       #- ./mandalorian/named.conf.root-hints:/etc/bind/named.conf.root-hints
 
   darthvader:
